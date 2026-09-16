@@ -1,0 +1,1616 @@
+/* =========================================================
+   BASIC
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: #f7f1ee;
+    color: #493e43;
+    font-family: "DM Sans", sans-serif;
+}
+
+button {
+    font-family: inherit;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #493e43;
+
+    transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(.77, 0, .18, 1);
+}
+
+.intro.hide {
+    opacity: 0;
+    transform: scale(1.08);
+    pointer-events: none;
+}
+
+.intro-glow {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    background: #b98fa0;
+
+    filter: blur(130px);
+    opacity: .2;
+
+    animation: breathingGlow 5s ease-in-out infinite;
+}
+
+@keyframes breathingGlow {
+
+    0%,
+    100% {
+        transform: scale(.8);
+        opacity: .12;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: .25;
+    }
+}
+
+.intro-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+
+    color: #fff;
+}
+
+.tiny-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    opacity: .55;
+
+    margin-bottom: 22px;
+}
+
+.intro h1 {
+    font-family: "Caveat", cursive;
+    font-size: clamp(65px, 13vw, 140px);
+    font-weight: 500;
+    line-height: .8;
+
+    margin-bottom: 28px;
+}
+
+.intro-sub {
+    font-size: 13px;
+    letter-spacing: 1px;
+    opacity: .65;
+}
+
+.main-button {
+    margin-top: 45px;
+
+    padding: 15px 26px;
+
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 100px;
+
+    background: transparent;
+    color: white;
+
+    cursor: pointer;
+
+    transition:
+        background .3s ease,
+        transform .3s ease;
+}
+
+.main-button span {
+    margin-left: 15px;
+}
+
+.main-button:hover {
+    background: rgba(255,255,255,.1);
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+#experience {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+/* =========================================================
+   PAGES
+========================================================= */
+
+.page {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: scale(.94) translateY(30px);
+
+    pointer-events: none;
+
+    transition:
+        opacity .75s cubic-bezier(.65, 0, .35, 1),
+        transform .9s cubic-bezier(.65, 0, .35, 1),
+        visibility .75s;
+
+    overflow: hidden;
+}
+
+.page.active-page {
+    opacity: 1;
+    visibility: visible;
+
+    transform: scale(1) translateY(0);
+
+    pointer-events: auto;
+}
+
+.page.leaving {
+    opacity: 0;
+    transform: scale(1.08) translateY(-20px);
+}
+
+
+/* =========================================================
+   SCENE
+========================================================= */
+
+.scene {
+    position: relative;
+    z-index: 5;
+
+    width: min(900px, 100%);
+}
+
+.scene-center {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    opacity: .5;
+
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-family: "Caveat", cursive;
+    font-size: clamp(50px, 7vw, 85px);
+    font-weight: 500;
+    line-height: .95;
+
+    margin-bottom: 25px;
+}
+
+.body-text {
+    font-size: 14px;
+    line-height: 1.9;
+    opacity: .65;
+}
+
+.hand-text {
+    font-family: "Caveat", cursive;
+    font-size: 25px;
+
+    margin-top: 22px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.page-hero {
+    background:
+        radial-gradient(circle at 50% 40%,
+        rgba(185,143,160,.22),
+        transparent 30%),
+        #f7f1ee;
+}
+
+.hero-name {
+    font-family: "Caveat", cursive;
+    font-size: clamp(90px, 16vw, 190px);
+    font-weight: 500;
+
+    line-height: .75;
+
+    margin-bottom: 35px;
+}
+
+.hero-small {
+    font-size: 13px;
+    opacity: .55;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.next-button {
+    margin-top: 45px;
+
+    padding: 12px 0;
+
+    border: none;
+    background: transparent;
+
+    color: #493e43;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    opacity: .65;
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+}
+
+.next-button span {
+    margin-left: 12px;
+    font-size: 15px;
+}
+
+.next-button:hover {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   REVEAL ITEMS
+========================================================= */
+
+.reveal-item {
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.22, 1, .36, 1);
+}
+
+.active-page .reveal-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 {
+    transition-delay: .15s;
+}
+
+.delay-2 {
+    transition-delay: .3s;
+}
+
+.delay-3 {
+    transition-delay: .45s;
+}
+
+.delay-4 {
+    transition-delay: .6s;
+}
+
+.delay-5 {
+    transition-delay: .75s;
+}
+
+
+/* =========================================================
+   BIRTHDAY
+========================================================= */
+
+.birthday-page {
+    background: #e5c9d3;
+}
+
+.birthday-orb {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.25);
+
+    filter: blur(100px);
+
+    animation: floatOrb 7s ease-in-out infinite;
+}
+
+@keyframes floatOrb {
+
+    0%,
+    100% {
+        transform: translate(-30px, -20px);
+    }
+
+    50% {
+        transform: translate(30px, 20px);
+    }
+}
+
+.birthday-title {
+    font-family: "Caveat", cursive;
+    font-size: clamp(65px, 10vw, 120px);
+    font-weight: 500;
+
+    line-height: .8;
+
+    margin-bottom: 35px;
+}
+
+.birthday-title span {
+    font-size: 1.15em;
+}
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.story-page {
+    background: #f7f1ee;
+}
+
+.story-decoration {
+    position: absolute;
+
+    right: 7%;
+    top: 5%;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 30vw;
+
+    line-height: .7;
+
+    opacity: .035;
+}
+
+.story-scene {
+    text-align: left;
+}
+
+.story-cards {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+.story-card {
+    min-height: 150px;
+
+    padding: 22px;
+
+    background: #fff;
+
+    border: 1px solid rgba(73,62,67,.08);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: transform .3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-6px) rotate(-1deg);
+}
+
+.story-card span {
+    font-size: 9px;
+    letter-spacing: 2px;
+    opacity: .35;
+}
+
+.story-card p {
+    font-family: "Caveat", cursive;
+    font-size: 23px;
+    line-height: 1.1;
+}
+
+.story-ending {
+    font-size: 13px;
+    line-height: 1.7;
+    opacity: .65;
+
+    max-width: 600px;
+
+    margin-top: 30px;
+}
+
+.story-ending strong {
+    color: #7a5c42;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline-page {
+    background: #493e43;
+    color: #f7f1ee;
+}
+
+.timeline-page .eyebrow,
+.timeline-page .body-text {
+    color: #f7f1ee;
+}
+
+.timeline {
+    width: min(600px, 100%);
+
+    margin-top: 35px;
+
+    text-align: left;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 25px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.timeline-item > span {
+    font-family: "Caveat", cursive;
+    font-size: 28px;
+
+    opacity: .45;
+}
+
+.timeline-item small {
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    opacity: .4;
+}
+
+.timeline-item p {
+    font-family: "Caveat", cursive;
+    font-size: 25px;
+}
+
+.timeline-page .next-button {
+    color: white;
+}
+
+
+/* =========================================================
+   ARCHIVE
+========================================================= */
+
+.archive-page {
+    background: #ede4e1;
+}
+
+.chat-stack {
+    position: relative;
+
+    width: 330px;
+    height: 190px;
+
+    margin-top: 35px;
+}
+
+.chat-stack img {
+    position: absolute;
+
+    width: 190px;
+    height: 145px;
+
+    object-fit: cover;
+
+    border: 7px solid white;
+
+    box-shadow: 0 15px 40px rgba(73,62,67,.12);
+
+    transition:
+        transform .5s ease,
+        z-index .3s;
+}
+
+.chat-stack img:nth-child(1) {
+    left: 0;
+    top: 15px;
+    transform: rotate(-8deg);
+}
+
+.chat-stack img:nth-child(2) {
+    left: 70px;
+    top: 0;
+    transform: rotate(3deg);
+}
+
+.chat-stack img:nth-child(3) {
+    right: 0;
+    top: 20px;
+    transform: rotate(8deg);
+}
+
+.chat-stack:hover img:nth-child(1) {
+    transform: translateX(-20px) rotate(-10deg);
+}
+
+.chat-stack:hover img:nth-child(2) {
+    transform: translateY(-12px) rotate(2deg);
+}
+
+.chat-stack:hover img:nth-child(3) {
+    transform: translateX(20px) rotate(10deg);
+}
+
+
+/* =========================================================
+   MUSIC
+========================================================= */
+
+.music-page {
+    background: #2f292d;
+    color: #f7f1ee;
+}
+
+.music-glow {
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    border-radius: 50%;
+
+    background: #b98fa0;
+
+    opacity: .08;
+
+    filter: blur(120px);
+}
+
+.music-page .body-text {
+    color: #f7f1ee;
+}
+
+.music-card {
+    width: min(550px, 100%);
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    margin-top: 40px;
+
+    padding: 30px;
+
+    background: rgba(255,255,255,.06);
+
+    border: 1px solid rgba(255,255,255,.1);
+
+    text-align: left;
+}
+
+.vinyl {
+    flex-shrink: 0;
+
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+
+    background:
+        repeating-radial-gradient(
+            circle,
+            #171417 0px,
+            #171417 2px,
+            #242024 3px,
+            #171417 5px
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: spin 10s linear infinite paused;
+}
+
+.music-card.playing .vinyl {
+    animation-play-state: running;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.vinyl-center {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background: #b98fa0;
+
+    border: 8px solid #171417;
+}
+
+.music-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.music-info span,
+.music-info small {
+    font-size: 9px;
+    letter-spacing: 1px;
+    opacity: .4;
+}
+
+.music-info strong {
+    font-family: "Caveat", cursive;
+    font-size: 30px;
+    font-weight: 500;
+
+    margin: 4px 0;
+}
+
+.music-button {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,.25);
+
+    background: transparent;
+    color: white;
+
+    margin-top: 15px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   THINGS / FLIP CARD
+========================================================= */
+
+.things-page {
+    background: #e5c9d3;
+}
+
+.flip-card {
+    width: 280px;
+    height: 190px;
+
+    perspective: 1000px;
+
+    margin-top: 35px;
+
+    cursor: pointer;
+}
+
+.flip-inner {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    transform-style: preserve-3d;
+
+    transition: transform .8s cubic-bezier(.65, 0, .35, 1);
+}
+
+.flip-card.flipped .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    inset: 0;
+
+    backface-visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    background: #fff;
+
+    box-shadow: 0 20px 50px rgba(73,62,67,.1);
+}
+
+.flip-front span {
+    font-size: 9px;
+    letter-spacing: 3px;
+    opacity: .35;
+
+    margin-bottom: 15px;
+}
+
+.flip-front p {
+    font-family: "Caveat", cursive;
+    font-size: 30px;
+    line-height: .95;
+}
+
+.flip-front small {
+    margin-top: 15px;
+    font-size: 9px;
+    opacity: .4;
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+
+    background: #493e43;
+    color: #fff;
+}
+
+.flip-back p {
+    font-family: "Caveat", cursive;
+    font-size: 27px;
+    line-height: 1.1;
+}
+
+
+/* =========================================================
+   UNKNOWN
+========================================================= */
+
+.unknown-page {
+    background: #f7f1ee;
+}
+
+.question-box {
+    width: min(600px, 100%);
+
+    margin-top: 40px;
+    padding: 35px;
+
+    border-top: 1px solid rgba(73,62,67,.15);
+    border-bottom: 1px solid rgba(73,62,67,.15);
+}
+
+.question-box span {
+    font-size: 9px;
+    letter-spacing: 3px;
+    opacity: .35;
+}
+
+.question-box p {
+    font-family: "Caveat", cursive;
+    font-size: 32px;
+    line-height: 1.1;
+
+    margin-top: 15px;
+}
+
+.question-button {
+    margin-top: 25px;
+
+    border: none;
+    background: transparent;
+
+    color: #7a5c42;
+
+    font-size: 10px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   LETTER
+========================================================= */
+
+.letter-page {
+    background: #e8ddda;
+}
+
+.envelope {
+    position: relative;
+
+    width: 260px;
+    height: 170px;
+
+    margin-top: 35px;
+
+    border: none;
+
+    background: #caa9b5;
+
+    cursor: pointer;
+
+    box-shadow: 0 20px 50px rgba(73,62,67,.15);
+
+    transition: transform .4s ease;
+}
+
+.envelope:hover {
+    transform: translateY(-7px);
+}
+
+.envelope-flap {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 130px solid transparent;
+    border-right: 130px solid transparent;
+    border-top: 85px solid #b98fa0;
+
+    transform-origin: top;
+
+    transition: transform .8s cubic-bezier(.65, 0, .35, 1);
+
+    z-index: 3;
+}
+
+.envelope-paper {
+    position: absolute;
+
+    width: 210px;
+    height: 135px;
+
+    background: white;
+
+    left: 25px;
+    bottom: 15px;
+
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.envelope-paper span {
+    font-family: "Caveat", cursive;
+    font-size: 25px;
+}
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+.letter-content {
+    display: none;
+
+    width: min(550px, 100%);
+
+    padding: 35px;
+
+    background: #fff;
+
+    text-align: left;
+
+    box-shadow: 0 20px 60px rgba(73,62,67,.12);
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.letter-content.show {
+    display: block;
+
+    animation: letterAppear .9s ease forwards;
+}
+
+@keyframes letterAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.letter-content p {
+    margin-bottom: 17px;
+}
+
+.signature {
+    font-family: "Caveat", cursive;
+    font-size: 30px;
+    text-align: right;
+
+    margin-top: 25px;
+}
+
+.letter-page.opened .envelope {
+    display: none;
+}
+
+.letter-page.opened .section-title,
+.letter-page.opened .eyebrow {
+    display: none;
+}
+
+.letter-page.opened .letter-content {
+    display: block;
+}
+
+
+/* =========================================================
+   FINAL ECLIPSE (Updated to match Secret Eclipse appearance)
+========================================================= */
+
+.final-page {
+    background: #080708;
+    color: #f7f1ee;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.final-page .secret-eclipse-visual {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.final-scene {
+    position: relative;
+    z-index: 10;
+}
+
+.final-title {
+    font-family: "Caveat", cursive;
+    font-size: clamp(75px, 12vw, 140px);
+    font-weight: 500;
+    line-height: .75;
+    margin-bottom: 40px;
+}
+
+.final-title span {
+    color: #e5c9d3;
+}
+
+.final-message {
+    font-family: "Caveat", cursive;
+    font-size: 30px;
+    line-height: 1.1;
+    opacity: .8;
+}
+
+.final-small {
+    margin-top: 25px;
+    font-size: 12px;
+    opacity: .4;
+}
+
+.restart-button {
+    margin-top: 45px;
+    border: 1px solid rgba(255,255,255,.15);
+    background: transparent;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 100px;
+    cursor: pointer;
+    opacity: .5;
+    transition: .3s;
+}
+
+.restart-button:hover {
+    opacity: 1;
+}
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.progress {
+    position: fixed;
+
+    top: 25px;
+    right: 30px;
+
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 8px;
+    letter-spacing: 2px;
+
+    opacity: .35;
+}
+
+.progress-line {
+    width: 35px;
+    height: 1px;
+
+    background: currentColor;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .page {
+        padding: 35px 22px;
+    }
+
+    .progress {
+        top: 18px;
+        right: 18px;
+    }
+
+    .intro h1 {
+        font-size: 78px;
+    }
+
+    .hero-name {
+        font-size: 105px;
+    }
+
+    .section-title {
+        font-size: 58px;
+    }
+
+    .story-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .story-card {
+        min-height: 125px;
+        padding: 16px;
+    }
+
+    .story-card p {
+        font-size: 19px;
+    }
+
+    .timeline-item {
+        gap: 15px;
+    }
+
+    .timeline-item p {
+        font-size: 22px;
+    }
+
+    .chat-stack {
+        transform: scale(.85);
+        margin-top: 20px;
+    }
+
+    .music-card {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .vinyl {
+        width: 100px;
+        height: 100px;
+    }
+
+    .music-info strong {
+        font-size: 25px;
+    }
+
+    .question-box {
+        padding: 25px 10px;
+    }
+
+    .question-box p {
+        font-size: 27px;
+    }
+
+    .letter-content {
+        max-height: 65vh;
+        overflow-y: auto;
+    }
+
+    .final-title {
+        font-size: 82px;
+    }
+
+    .final-message {
+        font-size: 26px;
+    }
+}
+
+/* =========================================================
+   SECTION 7 — HIDDEN ECLIPSE
+========================================================= */
+
+.section-eclipse-button {
+
+    position: absolute;
+
+    bottom: 22px;
+    right: 30px;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #493e43;
+
+    font-size: 20px;
+
+    opacity: .09;
+
+    cursor: pointer;
+
+    z-index: 30;
+
+    transition:
+        opacity .5s ease,
+        transform .6s ease;
+}
+
+.section-eclipse-button:hover {
+
+    opacity: .75;
+
+    transform:
+        rotate(180deg)
+        scale(1.15);
+}
+
+
+/* =========================================
+   SECRET SCREEN
+========================================= */
+
+.section-secret {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #080708;
+
+    color: #f7f1ee;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: scale(1.08);
+
+    transition:
+        opacity 1s ease,
+        transform 1.2s cubic-bezier(.65, 0, .35, 1),
+        visibility 1s;
+}
+
+.section-secret.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: scale(1);
+}
+
+
+/* =========================================
+   STARS
+========================================= */
+
+.section-secret .secret-stars,
+.final-page .secret-stars {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .2;
+
+    background-image:
+        radial-gradient(
+            circle,
+            white 1px,
+            transparent 1px
+        );
+
+    background-size: 80px 80px;
+
+    animation:
+        secretStarsMove
+        25s
+        linear
+        infinite;
+}
+
+@keyframes secretStarsMove {
+
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(-80px, 80px);
+    }
+
+}
+
+
+/* =========================================
+   ECLIPSE
+========================================= */
+
+.secret-eclipse-visual {
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* glowing sun */
+
+.secret-eclipse-sun {
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    border-radius: 50%;
+
+    background: #e5c9d3;
+
+    opacity: .7;
+
+    box-shadow:
+        0 0 40px rgba(229,201,211,.35),
+        0 0 130px rgba(185,143,160,.25);
+
+    animation:
+        secretSunGlow
+        4s
+        ease-in-out
+        infinite;
+}
+
+@keyframes secretSunGlow {
+
+    0%,
+    100% {
+        transform: scale(.95);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+}
+
+
+/* dark moon */
+
+.secret-eclipse-moon {
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    border-radius: 50%;
+
+    background: #080708;
+
+    transform: translateX(35px);
+}
+
+
+/* ring */
+
+.secret-eclipse-ring {
+
+    position: absolute;
+
+    width: 215px;
+    height: 215px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(229,201,211,.25);
+
+    animation:
+        secretRing
+        6s
+        ease-in-out
+        infinite;
+}
+
+@keyframes secretRing {
+
+    0%,
+    100% {
+        transform: scale(.9);
+        opacity: .3;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: .8;
+    }
+
+}
+
+
+/* =========================================
+   SECRET TEXT
+========================================= */
+
+.section-secret-content {
+
+    position: relative;
+
+    z-index: 10;
+
+    width: min(600px, 90%);
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 1s ease .6s,
+        transform 1s cubic-bezier(.22, 1, .36, 1) .6s;
+}
+
+.section-secret.active
+.section-secret-content {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+.section-secret-content .secret-small {
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    opacity: .4;
+
+    margin-bottom: 20px;
+}
+
+
+.section-secret-content h2 {
+
+    font-family: "Caveat", cursive;
+
+    font-size:
+        clamp(80px, 12vw, 140px);
+
+    font-weight: 500;
+
+    line-height: .7;
+
+    color: #e5c9d3;
+
+    margin-bottom: 35px;
+}
+
+
+.section-secret-content .secret-line {
+
+    width: 45px;
+    height: 1px;
+
+    margin:
+        0 auto
+        30px;
+
+    background:
+        rgba(255,255,255,.25);
+}
+
+
+.section-secret-content .secret-message {
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    opacity: .6;
+
+    margin-bottom: 20px;
+}
+
+
+.section-secret-content .secret-final {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 42px;
+
+    line-height: .95;
+
+    margin-top: 35px;
+}
+
+
+.section-secret-content .secret-signature {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 25px;
+
+    opacity: .45;
+
+    margin-top: 25px;
+}
+
+
+.section-secret-content .secret-close {
+
+    margin-top: 35px;
+
+    padding: 10px 20px;
+
+    border-radius: 100px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    opacity: .45;
+
+    transition: .3s;
+}
+
+.section-secret-content .secret-close:hover {
+
+    opacity: 1;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .section-eclipse-button {
+
+        right: 15px;
+        bottom: 16px;
+
+        opacity: .1;
+    }
+
+    .secret-eclipse-visual {
+
+        transform: scale(.75);
+    }
+
+    .section-secret-content .secret-final {
+
+        font-size: 36px;
+    }
+
+}
