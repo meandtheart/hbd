@@ -2,110 +2,152 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="A little something made for Eclipse."
+    >
 
     <title>for Eclipse.</title>
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================= INTRO ================= -->
+    <!-- =====================================================
+         LOADING / INTRO
+    ====================================================== -->
 
-    <div class="intro active" id="intro">
-
-        <div class="intro-glow"></div>
+    <div id="intro" class="screen intro-screen">
 
         <div class="intro-content">
-            <p class="tiny-label">mmmmmmmmm.....</p>
 
-            <h1>Hi Nistha</h1>
+            <div class="tiny-label">
+                mmmmmmmmm.....
+            </div>
 
-            <p class="intro-sub">
+            <h1>
+                Hi <span>Nistha</span>
+            </h1>
+
+            <p class="intro-subtitle">
                 It won't take that long. Just a ting thing for you.
             </p>
 
             <button class="main-button" id="enterBtn">
-                Enter
-                <span>→</span>
+                Enter <span>→</span>
             </button>
+
+        </div>
+
+        <div class="intro-bottom">
+           
         </div>
 
     </div>
 
 
-    <!-- ================= MAIN EXPERIENCE ================= -->
+    <!-- =====================================================
+         MAIN WEBSITE
+    ====================================================== -->
 
-    <main id="experience">
-
-        <!-- Progress -->
-
-        <div class="progress">
-            <span id="pageNumber">01</span>
-            <span class="progress-line"></span>
-            <span>10</span>
-        </div>
+    <main id="mainSite">
 
 
-        <!-- ================= PAGE 1 ================= -->
+        <!-- =================================================
+             HERO
+        ================================================== -->
 
-        <section class="page page-hero active-page">
+        <section class="hero section">
 
-            <div class="scene scene-center">
+            <div class="section-number">
+                01 / 08
+            </div>
 
-                <p class="eyebrow reveal-item">for the girl I call</p>
+            <div class="hero-content">
 
-                <h2 class="hero-name reveal-item delay-1">
-                    Eclipse.
+                <p class="eyebrow">
+                    for the girl I call
+                </p>
+
+                <h2>
+                    
+                    <span>Eclipse</span>
                 </h2>
 
-                <p class="hero-small reveal-item delay-2">
+                <p class="hero-description">
                     Yeah, this is actually for you.
                 </p>
 
-                <button class="next-button reveal-item delay-3">
-                    right here <span>→</span>
+                <button class="text-button scroll-btn" data-target="birthday">
+                    right here <span>↓</span>
                 </button>
 
+            </div>
+
+            <div class="scroll-indicator">
+                
             </div>
 
         </section>
 
 
-        <!-- ================= PAGE 2 ================= -->
+        <!-- =================================================
+             BIRTHDAY REVEAL
+        ================================================== -->
 
-        <section class="page birthday-page">
+        <section id="birthday" class="section birthday-section">
 
-            <div class="birthday-orb"></div>
+            <div class="section-number">
+                02 / 08
+            </div>
 
-            <div class="scene scene-center">
+            <div class="birthday-card">
 
-                <p class="eyebrow birthday-eyebrow reveal-item">
+                <div class="birthday-decoration">
+                    ✦
+                </div>
+
+                <p class="eyebrow">
                     Today is different
                 </p>
 
-                <h2 class="birthday-title reveal-item delay-1">
-                    Happy Birthday,<br>
+                <h2>
+                    Happy Birthday,
                     <span>Nistha.</span>
                 </h2>
 
-                <p class="body-text reveal-item delay-2">
-                    I could've just wished you
-                    <br>
-                    But somehow that didn't feel enough to me
+                <p class="large-copy">
+                    I could've just wished you.
                 </p>
 
-                <p class="hand-text reveal-item delay-3">
-                    so I just made a little thing and still it's not feeling enough
+                <p class="large-copy faded">
+                    But somehow that didn't feel enough to me.
                 </p>
 
-                <button class="next-button reveal-item delay-4">
-                    Anyway...<span>→</span>
+                <div class="divider"></div>
+
+                <p class="body-copy">
+                    so I just made a little thing and still it's not feeling enough.
+                </p>
+
+                <button class="text-button scroll-btn" data-target="story">
+                    Anyway... <span>→</span>
                 </button>
 
             </div>
@@ -113,504 +155,801 @@
         </section>
 
 
-        <!-- ================= PAGE 3 ================= -->
+        <!-- =================================================
+             HOW IT STARTED
+        ================================================== -->
 
-        <section class="page story-page">
+        <section id="story" class="section story-section">
 
-            <div class="story-decoration">
-                20
+            <div class="section-number">
+                03 / 08
             </div>
 
-            <div class="scene story-scene">
+            <div class="story-wrapper">
 
-                <p class="eyebrow reveal-item">
-                    
-                </p>
+                <div class="story-heading">
 
-                <h2 class="section-title reveal-item delay-1">
-                    It started <br>
-                    rather normally.
-                </h2>
+                    <p class="eyebrow">
+                        
+                    </p>
 
-                <div class="story-cards">
-
-                    <div class="story-card reveal-item delay-2">
-                        <span>01</span>
-                        <p>
-                            You were the 2nd captain in class.
-                        </p>
-                    </div>
-
-                    <div class="story-card reveal-item delay-3">
-                        <span>02</span>
-                        <p>
-                            You changed section.
-                        </p>
-                    </div>
-
-                    <div class="story-card reveal-item delay-4">
-                        <span>03</span>
-                        <p>
-                            I asked what happened.
-                        </p>
-                    </div>
-
-                    <div class="story-card reveal-item delay-5">
-                        <span>04</span>
-                        <p>
-                            You started explaining
-                        </p>
-                    </div>
+                    <h2>
+                        it started<br>
+                        rather <span>normally.</span>
+                    </h2>
 
                 </div>
 
-                <h5 class="story-ending reveal-item delay-5">
-                    And somehow, somewhere between those conversations and everything that came after them...
-                    <strong>you became my friend.</strong>
-                </h5>
 
-                <button class="next-button reveal-item delay-5">
-                    next memory <span>→</span>
-                </button>
+                <div class="story-text">
+
+                    <p>
+                        You were the 2nd captain in class.
+                    </p>
+
+                    <p>
+                        You changed section.
+                    </p>
+
+                    <p>
+                        I asked what happened.
+                    </p>
+
+                    <p>
+                        You started explaining.
+                    </p>
+
+
+                    <p class="highlight">
+                        And somehow, somewhere between
+                        those conversations and everything
+                        that came after them...<strong>you became
+                        my friend.</strong>
+                    </p>
+
+
+
+
+                    <p class="final-line">
+                       
+                        <span>It just happened.</span>
+                    </p>
+
+                </div>
 
             </div>
 
         </section>
 
 
-        <!-- ================= PAGE 4 ================= -->
+        <!-- =================================================
+             11 MONTH TIMELINE
+        ================================================== -->
 
-        <section class="page timeline-page">
+        <section class="section timeline-section">
 
-            <div class="scene scene-center">
+            <div class="timeline-background">
+                11
+            </div>
 
-                <p class="eyebrow reveal-item">
-                    a little timeline
+            <div class="section-number">
+                04 / 08
+            </div>
+
+            <div class="timeline-container">
+
+                <p class="eyebrow">
+                    almost a year
                 </p>
 
-                <h2 class="section-title reveal-item delay-1">
-                    11 months.
+                <h2>
+                    11 months of
+                    <span>somehow.</span>
                 </h2>
 
-                <p class="body-text reveal-item delay-2">
-                    That's not a very long time.
-                    <br>
-                    And somehow, it feels like it is.
+                <p class="timeline-intro">
+                    Not everything needs a perfect timeline.
+                    Some friendships just quietly happen.
                 </p>
+
 
                 <div class="timeline">
 
-                    <div class="timeline-item reveal-item delay-2">
-                        <span>01</span>
-                        <div>
-                            <small>the beginning</small>
-                            <p>2nd captain.</p>
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-content">
+
+                            <span>
+                                01
+                            </span>
+
+                            <h3>
+                                the beginning
+                            </h3>
+
+                            <p>
+                                You changed sections.
+                                I asked what happened.
+                                We started talking.
+                            </p>
+
                         </div>
+
                     </div>
 
-                    <div class="timeline-item reveal-item delay-3">
-                        <span>03</span>
-                        <div>
-                            <small>somewhere around here</small>
-                            <p>we started talking.</p>
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-content">
+
+                            <span>
+                                02
+                            </span>
+
+                            <h3>
+                                random conversations
+                            </h3>
+
+                            <p>
+                                Somehow they became normal.
+                                And then they became something
+                                I actually looked forward to.
+                            </p>
+
                         </div>
+
                     </div>
 
-                    <div class="timeline-item reveal-item delay-4">
-                        <span>06</span>
-                        <div>
-                            <small>without really noticing</small>
-                            <p>we became friends.</p>
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-content">
+
+                            <span>
+                                03
+                            </span>
+
+                            <h3>
+                                somewhere along the way
+                            </h3>
+
+                            <p>
+                                You stopped being just someone
+                                I knew from class.
+                            </p>
+
                         </div>
+
                     </div>
 
-                    <div class="timeline-item reveal-item delay-5">
-                        <span>11</span>
-                        <div>
-                            <small>right now</small>
-                            <p>I'm making you a website.</p>
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-content">
+
+                            <span>
+                                04
+                            </span>
+
+                            <h3>
+                                today
+                            </h3>
+
+                            <p>
+                                11 months later, here I am,
+                                making an entire website
+                                because apparently a normal
+                                birthday message wasn't enough.
+                            </p>
+
                         </div>
+
                     </div>
 
                 </div>
-
-                <button class="next-button reveal-item delay-5">
-                    there's more <span>→</span>
-                </button>
 
             </div>
 
         </section>
 
 
-        <!-- ================= PAGE 5 ================= -->
+        <!-- =================================================
+             WHATSAPP ARCHIVE
+        ================================================== -->
 
-        <section class="page archive-page">
+        <section class="section archive-section">
 
-            <div class="scene scene-center">
+            <div class="section-number">
+                05 / 08
+            </div>
 
-                <p class="eyebrow reveal-item">
-                    before all this
+            <div class="archive-heading">
+
+                <p class="eyebrow">
+               
                 </p>
 
-                <h2 class="section-title reveal-item delay-1">
-                    the first messages.
+                <h2>
+                    the first
+                    <span>messages.</span>
                 </h2>
 
-                <p class="body-text reveal-item delay-2">
-                    Before there was a friendship,
-                    <br>
-                    there was just a conversation.
+                <p>
+                    Ou the messages...<br> I didn't want to talk about this
+                    but I've to,<br> Everytime I look back at those chats
+                    makes me cringe so badly. I just think-"What the
+                    hell is this!?". I had no idea how to hold a
+                    conversation properly. I hadn't really talked to
+                    anyone else, so I had no idea how to go about it.
+                    Honestly, those messages are still so embarrassing
+                    to read. Just forget you saw them. That's basically
+                    why I included them.
                 </p>
 
-                <div class="chat-stack reveal-item delay-3">
+            </div>
 
-                    <img src="assets/chat1.jpg" alt="First conversation">
-                    <img src="assets/chat2.jpg" alt="Conversation">
-                    <img src="assets/chat3.jpg" alt="Conversation">
 
+            <div class="chat-archive">
+
+                <!-- Replace these with your actual screenshots -->
+
+                <div class="chat-photo photo-one">
+                    <img
+                        src="assets/chat1.jpg"
+                        alt="Our first WhatsApp conversation"
+                    >
+
+                    <span class="photo-label">
+                        11 months ago
+                    </span>
                 </div>
 
-                <p class="hand-text reveal-item delay-4">
-                    kinda funny looking back at it now.
-                </p>
 
-                <button class="next-button reveal-item delay-5">
-                    next <span>→</span>
-                </button>
+                <div class="chat-photo photo-two">
+                    <img
+                        src="assets/chat2.jpg"
+                        alt="An early WhatsApp conversation"
+                    >
+
+                    <span class="photo-label">
+                        somewhere near the beginning
+                    </span>
+                </div>
+
+
+                <div class="chat-photo photo-three">
+                    <img
+                        src="assets/chat3.jpg"
+                        alt="An old WhatsApp conversation"
+                    >
+
+                    <span class="photo-label">
+                        before we knew
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="archive-ending">
+
+                <p>
+                    Just forget those weired words...
+                </p>
 
             </div>
 
         </section>
 
 
-        <!-- ================= PAGE 6 ================= -->
+        <!-- =================================================
+             CAS / MUSIC
+        ================================================== -->
 
-        <section class="page music-page">
+        <section class="section music-section">
 
-            <div class="music-glow"></div>
+            <div class="section-number">
+                06 / 08
+            </div>
 
-            <div class="scene scene-center">
+            <div class="music-content">
 
-                <p class="eyebrow reveal-item">
+                <p class="eyebrow">
                     soundtrack, maybe?
                 </p>
 
-                <h2 class="section-title reveal-item delay-1">
-                    A little CAS.
+                <h2>
+                    A little
+                    <span>CAS.</span>
                 </h2>
 
-                <p class="body-text reveal-item delay-2">
+                <p class="music-intro">
                     We never really picked a song together.
-                    <br>
                     But somehow we ended up liking the same band.
                 </p>
 
-                <div class="music-card reveal-item delay-3">
+
+                <div class="music-card">
 
                     <div class="vinyl">
-                        <div class="vinyl-center"></div>
+                        <div class="vinyl-center">
+                            CAS
+                        </div>
                     </div>
 
                     <div class="music-info">
-                        <span>somewhere in the background</span>
-                        <strong>Cigarettes After Sex</strong>
-                        <small>press play if you want</small>
 
+                        <span class="music-label">
+                            somewhere in the background
+                        </span>
+
+                        <h3>
+                            Cigarettes After Sex
+                        </h3>
+
+                        <p>
+                            press play if you want to.
+                        </p>
+
+                        <!-- Optional music button -->
                         <button id="musicBtn" class="music-button">
-                            ▶
+                            <span id="musicIcon">▶</span>
+                            <span id="musicText"></span>
                         </button>
+
                     </div>
 
                 </div>
 
-                <audio id="birthdayMusic" loop>
-                    <source src="assets/song.mp3" type="audio/mpeg">
-                </audio>
+                <p class="music-note">
 
-                <button class="next-button">
-                    continue <span>→</span>
-                </button>
+                </p>
 
             </div>
 
         </section>
 
 
-<!-- ================= PAGE 7 ================= -->
+        <!-- =================================================
+             THINGS I'VE LEARNED
+        ================================================== -->
 
-<section class="page things-page">
+        <section class="section things-section">
 
-    <div class="scene scene-center" id="thingsNormal">
-
-        <p class="eyebrow reveal-item">
-            things I've noticed
-        </p>
-
-        <h2 class="section-title reveal-item delay-1">
-            A few things<br>
-            I've learned about you.
-        </h2>
-
-        <div class="flip-card reveal-item delay-2" id="flipCard">
-
-            <div class="flip-inner">
-
-                <div class="flip-front">
-
-                    <span>01</span>
-
-                    <p>
-                        there's something<br>
-                        about you.
-                    </p>
-
-                    <small>
-                        tap to find out
-                    </small>
-
-                </div>
-
-                <div class="flip-back">
-
-                    <p>
-                        You care about the people
-                        and things that matter to you.
-                    </p>
-
-                </div>
-
+            <div class="section-number">
+                07 / 08
             </div>
 
-        </div>
+            <div class="things-container">
 
-        <button class="next-button">
-            another one <span>→</span>
-        </button>
-
-    </div>
-
-
-    <!-- =========================================
-         SECRET ECLIPSE BUTTON
-    ========================================== -->
-
-    <button
-        class="section-eclipse-button"
-        id="sectionEclipseBtn"
-        aria-label="Something hidden">
-        ◐
-    </button>
-
-
-    <!-- =========================================
-         SECRET OVERLAY
-    ========================================== -->
-
-    <div class="section-secret" id="sectionSecret">
-
-        <div class="secret-stars"></div>
-
-
-
-        <div class="section-secret-content">
-
-            <p class="secret-small">
-                you found it.
-            </p>
-
-            <h2>
-                Eclipse.
-            </h2>
-
-            <div class="secret-line"></div>
-
-            <p class="secret-message">
-                I wasn't going to make this easy to find.
-            </p>
-
-            <p class="secret-message">
-                But if you somehow found this...
-                <br>
-                I guess you were curious enough.
-            </p>
-
-            <p class="secret-message">
-                So here's one thing I wanted you to know:
-            </p>
-
-            <p class="secret-final">
-                I'm really glad<br>
-                I met you.
-            </p>
-
-            <p class="secret-signature">
-                — me
-            </p>
-
-            <button
-                class="secret-close"
-                id="sectionSecretClose">
-                return ↺
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-        <!-- ================= PAGE 8 ================= -->
-
-        <section class="page unknown-page">
-
-            <div class="scene scene-center">
-
-                <p class="eyebrow reveal-item">
-                    and yet...
+                <p class="eyebrow">
+                    
                 </p>
 
-                <h2 class="section-title reveal-item delay-1">
-                    There are still<br>
-                    things I don't know.
+                <h2>
+                    Few things I've
+                    <span>Dont know what to write here</span>
                 </h2>
 
-                <div class="question-box reveal-item delay-2">
 
-                    <span id="questionNumber">01</span>
+                <div class="things-grid">
 
-                    <p id="questionText">
-                        What's something you wish more people understood about you?
-                    </p>
+                    <div class="thing-card">
+
+                        <span class="thing-number">
+                            01
+                        </span>
+
+                        <p>
+                            You love you cats very much
+                            
+                        </p>
+
+                    </div>
+
+
+                    <div class="thing-card">
+
+                        <span class="thing-number">
+                            02
+                        </span>
+
+                        <p>
+                            what to write here,rafi?
+                            
+                        </p>
+
+                    </div>
+
+
+                    <div class="thing-card">
+
+                        <span class="thing-number">
+                            03
+                        </span>
+
+                        <p>
+                         and what about here?
+                        </p>
+
+                    </div>
+
+
+                    <div class="thing-card">
+
+                        <span class="thing-number">
+                            04
+                        </span>
+
+                        <p>
+                            You somehow convinced me
+                            you're the topper.
+                        </p>
+
+                    </div>
+
+
+                    <div class="thing-card">
+
+                        <span class="thing-number">
+                            05
+                        </span>
+
+                        <p>
+                            Unfortunately, you seem to
+                            think I'm the topper.
+                        </p>
+
+                    </div>
+
+
+                    <div class="thing-card special-card">
+
+                        <span class="thing-number">
+                            06
+                        </span>
+
+                        <p>
+                            We're both apparently wrong.
+                        </p>
+
+                    </div>
 
                 </div>
-
-                <button class="question-button" id="questionBtn">
-                    another question ↗
-                </button>
-
-                <button class="next-button">
-                    one last thing <span>→</span>
-                </button>
 
             </div>
 
         </section>
 
 
-        <!-- ================= PAGE 9 ================= -->
+        <!-- =================================================
+             THINGS I DON'T KNOW
+        ================================================== -->
 
-        <section class="page letter-page">
+        <section class="section unknown-section">
 
-            <div class="scene scene-center">
+            <div class="unknown-glow"></div>
 
-                <p class="eyebrow reveal-item">
-                    okay, this part is serious
+            <div class="unknown-container">
+
+                <p class="eyebrow">
+                    and that's okay
                 </p>
 
-                <h2 class="section-title reveal-item delay-1">
-                    One little letter.
+                <h2>
+                    Sometimes 
+                    <span>I just think,</span>
                 </h2>
 
-                <button class="envelope" id="envelope">
+                <div class="unknown-list">
 
-                    <div class="envelope-paper">
-                        <span>open</span>
+                    <div class="unknown-item">
+                        <span>01</span>
+                        <p>
+                            I dont want to tell about it but you get it.
+                        </p>
                     </div>
 
-                    <div class="envelope-flap"></div>
+                    <div class="unknown-item">
+                        <span>02</span>
+                        <p>
+                            What are you going to become?
+                        </p>
+                    </div>
 
-                </button>
+                    <div class="unknown-item">
+                        <span>03</span>
+                        <p>
+What's a small thing that can instantly make your day better?
+                        </p>
+                    </div>
+					
+					                    <div class="unknown-item">
+                        <span>04</span>
+                        <p>
+                            Which part of this year
+                            you'll remember for years from. now
+                        </p>
+                    </div>
 
-                <div class="letter-content" id="letterContent">
+                    <div class="unknown-item">
+                        <span>05</span>
+                        <p>
+                            How you actually see me
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="unknown-ending">
 
                     <p>
+                        Maybe I'll never know everything.
+                    </p>
+
+                    <strong>
+                        And that's okay.
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             MAIN LETTER
+        ================================================== -->
+
+        <section class="section letter-section">
+
+            <div class="letter-paper">
+
+                <div class="letter-top">
+
+                    <span>
+                       Some writings for you,though you're not a person of this type
+                    </span>
+
+                    <span>
+                      <br><br>22 September 2026
+                    </span>
+
+                </div>
+
+
+                <div class="letter-content">
+
+                    <p class="letter-small">
                         Eclipse,
                     </p>
 
+                    <h2>
+                        I don't really know
+                        how to say this.
+                    </h2>
+
+
                     <p>
-                        I don't really know how to put all of this
-                        into words without making it sound unnecessarily
-                        dramatic.
+                        I'm not that goog at saying things,
+                        so I just made it.I don't have some perfectly written explanation for why.
                     </p>
 
                     <p>
-                        But I'm genuinely glad that we became friends.
+                        So for your birthday, I hope this year become kind to you. Hope you stay healthy & hopeful, and keep finding reasons to smile.
                     </p>
 
                     <p>
-                        I hope this next year is kind to you.
-                        I hope you stay healthy, hopeful,
-                        and keep finding reasons to smile.
+And I hope your family stays well, your ordinary days become some good memories and always have something to look forward to.
                     </p>
 
                     <p>
-                        And honestly...
-                        I'm glad that one day I simply asked,
-                        <em>"what happened?"</em>
+And whatever happens next, I hope you'll remember that somewhere along the way, you became an important part of my life.
                     </p>
+
+                    <p>
+                        And honestly... I'm just glad I got to
+                        know you.
+                    </p>
+
 
                     <p>
                         Because somehow, that little question
                         led me here.
                     </p>
 
-                    <p class="signature">
-                        — me
-                    </p>
+
+                    <div class="letter-signature">
+
+                        <p>
+                            Happy Birthday, Nistha.
+                        </p>
+
+                        <span>
+                            
+                        </span>
+
+                    </div>
 
                 </div>
-
-                <button class="next-button letter-next">
-                    almost there <span>→</span>
-                </button>
 
             </div>
 
         </section>
 
 
-<!-- ================= PAGE 10 ================= -->
+        <!-- =================================================
+             HIDDEN ECLIPSE
+        ================================================== -->
 
-<section class="page final-page">
+        <section class="secret-section">
 
-    <div class="secret-stars"></div>
+            <button
+                id="eclipseButton"
+                class="eclipse-button"
+                aria-label="Something hidden"
+            >
+                ◐
+            </button>
 
-    <div class="secret-eclipse-visual">
-        <div class="secret-eclipse-ring"></div>
-        <div class="secret-eclipse-sun"></div>
-        <div class="secret-eclipse-moon"></div>
-    </div>
+            <p>
+                
+            </p>
 
-    <div class="scene scene-center final-scene">
+        </section>
 
-        <p class="eyebrow reveal-item">
-            one final thing
-        </p>
 
-        <h2 class="final-title reveal-item delay-1">
-            Happy Birthday,<br>
-            <span>Eclipse.</span>
-        </h2>
+        <!-- =================================================
+             FINAL PAGE
+        ================================================== -->
 
-        <p class="final-message reveal-item delay-2">
-            Stay healthy.<br>
-            Stay hopeful.<br>
-            Keep being you.
-        </p>
+        <section class="final-section">
 
-        <p class="final-small reveal-item delay-3">
-            I'm glad I got to know you.
-        </p>
+            <div class="final-content">
 
-        <button class="restart-button reveal-item delay-4" id="restartBtn">
-            start again ↺
+                <p class="eyebrow">
+                    sooo....
+                </p>
+
+                <h2>
+                    Happy<br>Birthday<br>Eclipse
+                </h2>
+
+                <div class="final-message">
+
+                    <p>
+                        I don't really know how next
+                        11 months will look like.
+                    </p>
+
+                    <p>
+                        I don't know where we'll be?
+                        What we'll be doing? Or how much
+                        things will change.
+                    </p>
+
+                    <p>
+                        But I'm glad that somewhere along
+                        the way, I got to know you.
+                    </p>
+
+                    <p>
+                        So today, I just hope you're healthy,
+                        hopeful and surrounded by things
+                        that makes life a little lighter.
+                    </p>
+
+                    <p class="final-highlight">
+
+                    </p>
+
+                    <p class="final-highlight">
+                                                Have a genuinely good birthday,
+                        Nistha.
+                    </p>
+
+                </div>
+
+
+                <div class="final-signature">
+
+                    <span>
+                        Me
+                    </span>
+
+                    <strong>
+                        Ishtiaque
+                    </strong>
+
+                    <small>
+                        
+                    </small>
+
+                </div>
+
+                <div class="end-transmission">
+                    Something in my mind<br>Always in my head's space
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         SECRET OVERLAY
+    ====================================================== -->
+
+    <div id="secretOverlay" class="secret-overlay">
+
+        <button
+            id="closeSecret"
+            class="close-secret"
+        >
+            ×
         </button>
 
+        <div class="secret-content">
+
+            <div class="secret-moon">
+                ◐
+            </div>
+
+            <p class="eyebrow">
+                you found it.
+            </p>
+
+            <h2>
+                I was going<br>
+                to hide this
+                
+            </h2>
+
+            <p>
+                
+            </p>
+
+            <p>
+                Actually no
+            </p>
+
+            <p>
+               I just wanted an excuse to use your name again 
+            </p>
+
+            <strong>
+                Eclipse.
+            </strong>
+
+            <p class="secret-wish">
+                You're a very good crocheter<br>
+                A painter<br> A singer
+            </p>
+
+        </div>
+
     </div>
 
-</section>
-    </main>
+
+    <!-- =====================================================
+         OPTIONAL MUSIC
+    ====================================================== -->
+
+    <audio id="birthdayMusic" loop>
+        <source src="assets/song.mp3" type="audio/mpeg">
+    </audio>
+
 
     <script src="script.js"></script>
 
