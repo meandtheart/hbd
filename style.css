@@ -1867,3 +1867,18 @@ button {
     color: rgba(247, 241, 238, 0.82);
     text-shadow: 0 1px 10px rgba(0,0,0,0.5);
 }
+
+
+/* =========================================================
+   STYLING FOR THE FINAL ECLIPSE TEXT
+========================================================= */
+
+.final-section h2 span {
+    font-family: var(--hand);
+    color: #ffccd5;
+    font-weight: 500;
+    font-size: 1.15em; /* Makes it slightly larger and more graceful */
+    display: inline-block;
+    text-shadow: 0 0 20px rgba(229, 201, 211, 0.8), 0 0 40px rgba(229, 201, 211, 0.4);
+    letter-spacing: normal;
+}
